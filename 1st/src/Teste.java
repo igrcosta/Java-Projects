@@ -5,6 +5,8 @@ public class Teste {
 
         Balestrini.AnaliseCorpo();
         Cariani.AnaliseCorpo();
+
+        Cariani.Cardio();
 }
 }
 
@@ -21,5 +23,13 @@ class Marombeiro {
         System.out.println("ele está pesando " + peso);
         System.out.println("e tem " + porc_gordura + "% de gordura.");
         System.out.println("=============");
+    }
+
+    public void Cardio(){
+        System.out.println("vamos fazer um cardio com o Cariani!");
+        int n_gordura=porc_gordura-5;
+        System.out.print("Cariani tinha " + porc_gordura + " e agora tem " + n_gordura + " de gordura em seu corpo");
+        porc_gordura=n_gordura;
+        System.out.println("\nTestando, cariani tem agora "+porc_gordura);
     }
 }
