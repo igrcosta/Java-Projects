@@ -1,7 +1,8 @@
 public class Player {
-    private String nome = "Cleitim";
-    private int hp = 15;
-    private String arma = "punhos";
+    //propriedades
+    private String nome;
+    private int hp;
+    private String arma;
 
     //construtor
     public Player(String nome, int hp, String arma){
@@ -11,7 +12,7 @@ public class Player {
         //o uppercase parece que ajuda pra ficar mais fácil com strings
     }
 
-    //getters e setters
+    //getters
     public String getarma() {
         return this.arma;
     }
@@ -24,5 +25,19 @@ public class Player {
         return this.hp;
     }
 
-    //
+    //Setters
+    public void Setarma(String arma){
+        this.arma = arma.toUpperCase();
+    }
+    //por enquanto, vou deixar as armas apenas como strings, mas quero no futuro, 
+    //colocar as armas como sendo objetos que instanciamos no player, para assim,
+    //guardar cada atributo de cada arma e ter uma enorme lista de armas
+
+    public void SetHP(int hp){
+        this.hp = hp;
+    }
+
+    public void Setnome(String nome){
+        this.nome = nome.toUpperCase();
+    }
 }

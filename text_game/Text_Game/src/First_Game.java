@@ -16,6 +16,8 @@ public class First_Game {
         
         Player p1 = new Player(nome,15,"punhos");
 
+        //colocar depois um IF para caso o nome dele seja Zoio, responda com a frase "HARDCORE GARAI"
+
         System.out.println("Olá "+ nome +"!\nÉ um prazer te conhecer!\n");
         System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getarma());
         
