@@ -13,10 +13,7 @@ public class Player {
         this.arma = null;
     }
 
-    //getters
-    public String getarma() {
-        return arma.getID();
-    }
+    //getters comuns
 
     public String getnome() {
         return nome;
@@ -24,6 +21,24 @@ public class Player {
 
     public int gethp(){
         return this.hp;
+    }
+
+    //getters para arma
+
+    public String getIDarma() {
+        return arma.getID();
+    }
+
+    public Weapon getarma(){
+        return arma;
+    }
+
+    public int Get_Dano_Arma(){
+        return arma.getDamage();
+    }
+
+    public int Get_Durability(){
+        return arma.getdurability();
     }
 
     //Setters
@@ -42,4 +57,6 @@ public class Player {
     public void Setnome(String nome){
         this.nome = nome.toUpperCase();
     }
+
+    //métodos extras
 }

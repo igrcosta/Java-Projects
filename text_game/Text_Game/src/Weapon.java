@@ -4,11 +4,25 @@ public class Weapon {
     private int durability;
 
     //Construtor
-    public Weapon(String ID, int Damage, int durability){
+    public Weapon(String ID){
         this.ID = ID.toUpperCase();
         //o uppercase parece que ajuda pra ficar mais fácil com strings
-        this.Damage = Damage;
-        this.durability = durability;
+        this.Damage = 0;
+        this.durability = 0;
+
+        //lista de armas abaixo
+        String Marreta = "Marreta";
+        String faca_s = "faca_simples";
+        
+        if (ID.equals(Marreta)){
+            SetDamage(30);
+            SetDurability(400);
+        }
+    
+        if(ID.equals("Faca_Simples")){
+            SetDamage(5);
+            SetDurability(150);
+        }
     }
 
     //getters
@@ -53,6 +67,4 @@ public class Weapon {
             System.out.println("Arma quebrada, nenhum dano causado");
         }
     }
-
-    
 }

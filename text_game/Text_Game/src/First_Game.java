@@ -21,16 +21,16 @@ public class First_Game {
             Player p1 = new Player(nome,15);
             
             System.out.println("Olá "+ p1.getnome() +"!\nÉ um prazer te conhecer!\n");
-            Weapon arma_inicial = new Weapon("Faca_Simples",5,150);
+            Weapon arma_inicial = new Weapon("Faca_Simples");
             p1.Equipar_arma(arma_inicial);
-            System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getarma());
+            System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getIDarma() + "\nSua arma causa: "+ p1.Get_Dano_Arma()+ " de Dano\nDurabilidade atual: "+ p1.Get_Durability());
         }
         else {
             System.out.println("Fala AlEk o bgl é intelcore mermo garai");
             Player p1 = new Player(nome,30);
-            Weapon Marreta = new Weapon("Marreta",30,400);
+            Weapon Marreta = new Weapon("Marreta");
             p1.Equipar_arma(Marreta);
-            System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getarma());
+            System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getIDarma() + "\nSua arma causa: "+ p1.Get_Dano_Arma()+ " de Dano\nDurabilidade atual: "+ p1.Get_Durability());
         }
 
         scanner.close();
