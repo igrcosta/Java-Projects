@@ -2,23 +2,24 @@ public class Player {
     //propriedades
     private String nome;
     private int hp;
-    private String arma;
+    private Weapon arma;
 
     //construtor
-    public Player(String nome, int hp, String arma){
-        this.nome = nome.toUpperCase();
+    public Player(String nome, int hp) 
+    // no parênteses eu n coloquei a classe de arma, já que vai começar com null
+    {
+        this.nome = nome.toUpperCase(); //o uppercase parece que ajuda pra ficar mais fácil com strings
         this.hp = hp;
-        this.arma = arma.toUpperCase();
-        //o uppercase parece que ajuda pra ficar mais fácil com strings
+        this.arma = null;
     }
 
     //getters
     public String getarma() {
-        return this.arma;
+        return arma.getID();
     }
 
     public String getnome() {
-        return this.nome;
+        return nome;
     }
 
     public int gethp(){
@@ -26,8 +27,9 @@ public class Player {
     }
 
     //Setters
-    public void Setarma(String arma){
-        this.arma = arma.toUpperCase();
+    public void Equipar_arma(Weapon nova_arma){
+        this.arma = nova_arma;
+        System.out.println(arma.getID() +" equipada ao inventário de "+ nome);
     }
     //por enquanto, vou deixar as armas apenas como strings, mas quero no futuro, 
     //colocar as armas como sendo objetos que instanciamos no player, para assim,
