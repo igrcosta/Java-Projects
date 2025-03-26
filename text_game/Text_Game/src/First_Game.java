@@ -35,5 +35,10 @@ public class First_Game {
 
         scanner.close();
         //fechamos o scanner para evitar problemas de buffer e performance
+
+        //limpe o console 
+        //System.out.print("\033[H\033[2J");  
+        //System.out.flush(); 
+        //FIM Limpe o console
     }
 }
