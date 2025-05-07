@@ -10,8 +10,11 @@ public class PlayerGUI extends JFrame{
 
     public PlayerGUI(Player player) {
         this.player = player;
-        inicializarComponentes();
         configurarJanela();
+        inicializarComponentes();
+
+        setVisible(true);
+        //sem isso aqui, não enxergo nada
     }
 
     private void configurarJanela(){
@@ -62,6 +65,8 @@ private int calcularPorcentagemVida() {
 } else {
     int vidaMaxima = 30; 
     return (player.gethp() * 100) / vidaMaxima;
+}
+
 }
 
 }

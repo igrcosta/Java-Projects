@@ -1,6 +1,7 @@
 public class Player {
     //propriedades
-    private String nome;
+    protected String nome;
+    //coloquei protected para as armas poderem acessar dboa
     private int hp;
     private Weapon arma;
 
@@ -26,7 +27,7 @@ public class Player {
     //getters para arma
 
     public String getIDarma() {
-        return arma.getID();
+        return arma.getName();
     }
 
     public Weapon getarma(){
@@ -44,7 +45,7 @@ public class Player {
     //Setters
     public void Equipar_arma(Weapon nova_arma){
         this.arma = nova_arma;
-        System.out.println(arma.getID() +" equipada ao inventário de "+ nome);
+        System.out.println(arma.getName() +" equipada ao inventário de "+ nome);
     }
     //por enquanto, vou deixar as armas apenas como strings, mas quero no futuro, 
     //colocar as armas como sendo objetos que instanciamos no player, para assim,

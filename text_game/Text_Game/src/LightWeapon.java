@@ -1,7 +1,7 @@
 public class LightWeapon extends Weapon {
     public LightWeapon (String Name){
         super(Name);
-        this.damage = 5;
+        this.Damage = 5;
         this.durability = 150;
     }
 
