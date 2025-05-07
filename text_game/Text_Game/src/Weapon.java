@@ -1,41 +1,21 @@
-public class Weapon {
-    private String ID;
-    private int Damage;
-    private int durability;
-    private String Type;
+abstract public class Weapon{
+    protected String Name;
+    protected int Damage;
+    protected int durability;
+
+    //atributos em protected para que as classes filhas possam acessar 
 
     //Construtor
-    public Weapon(String ID){
-        this.ID = ID.toUpperCase();
+    public Weapon(String Name){
+        this.Name = Name.toUpperCase();
         //o uppercase parece que ajuda pra ficar mais fácil com strings
         this.Damage = 0;
         this.durability = 0;
-        this.Type = null;
-
-        //lista de armas abaixo
-
-        if (ID.equals("Marreta")){
-            SetDamage(30);
-            SetDurability(400);
-            Set_Type("Heavy");
-        }
-
-        if(ID.equals("Espada_Genérica")){
-            SetDamage(10);
-            SetDurability(200);
-            Set_Type("Medium");
-        }
-    
-        if(ID.equals("Faca_Simples")){
-            SetDamage(5);
-            SetDurability(150);
-            Set_Type("Light");
-        }
     }
 
     //Getters
-    public String getID(){
-        return ID;
+    public String getName(){
+        return Name;
     }
 
     public int getDamage(){
@@ -46,14 +26,10 @@ public class Weapon {
         return durability;
     }
 
-    public String getType(){
-        return Type;
-    }
-
     //Setters
 
-    public void SetID(String ID){
-        this.ID = ID.toUpperCase();
+    public void SetName(String Name){
+        this.Name = Name.toUpperCase();
     }
 
     public void SetDamage(int damage){
@@ -64,13 +40,35 @@ public class Weapon {
         this.durability = durability;
     }
 
-    public void Set_Type(String Type){
-        this.Type = Type;
-    }
+    //métodos para teste de herança/classes abstratas
+
+    public abstract void attack();
+
+    
+
+        /* lista de armas abaixo
+
+        if (ID.equals("Marreta")){
+            SetDamage(30);
+            SetDurability(400);
+            //Set_Type("Heavy");
+        }
+
+        if(ID.equals("Espada_Genérica")){
+            SetDamage(10);
+            SetDurability(200);
+            //Set_Type("Medium");
+        }
+    
+        if(ID.equals("Faca_Simples")){
+            SetDamage(5);
+            SetDurability(150);
+            //Set_Type("Light");
+        }
 
     //métodos extras
 
-    public void Golpe(){
+     public void Golpe(){
         //verificar o tipo da arma, para poder balancear
         //armas pesadas, vão dar 1 golpe por rodada
         //armas médias vao dar 2 golpes por rodadas
@@ -125,5 +123,5 @@ public class Weapon {
         }
 
         //causar dano no alvo, desgastar arma
-    }
+    } */
 }

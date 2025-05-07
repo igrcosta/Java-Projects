@@ -1,5 +1,7 @@
 import java.util.Scanner; //importei a classe Scanner para dar "scanf" no teclado
 
+import javax.swing.SwingUtilities;
+
 public class First_Game {
     public static void main(String[] args) throws Exception {
         System.out.println("Seja bem vindo ao meu projeto de text rpg!");
@@ -15,20 +17,27 @@ public class First_Game {
 
         String Zoio ="Zoio";
 
-        if(!nome.equals(Zoio)) //usei .equals para comparar a String nome com a String Zoio,
+        if(!nome.equals(Zoio)){ //usei .equals para comparar a String nome com a String Zoio,
         //e coloquei um ! antes para indicar quando não forem iguais na comparação
-        {
+
             Player p1 = new Player(nome,15);
+
+            SwingUtilities.invokeLater(() -> {
+                new PlayerGUI(p1).setVisible(true); });
             
             System.out.println("Olá "+ p1.getnome() +"!\nÉ um prazer te conhecer!\n");
-            Weapon arma_inicial = new Weapon("Faca_Simples");
+            LightWeapon arma_inicial = new LightWeapon("Faca_Simples");
             p1.Equipar_arma(arma_inicial);
             System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getIDarma() + "\nSua arma causa: "+ p1.Get_Dano_Arma()+ " de Dano\nDurabilidade atual: "+ p1.Get_Durability());
         }
         else {
             System.out.println("Fala AlEk o bgl é intelcore mermo garai");
             Player p1 = new Player(nome,30);
-            Weapon Marreta = new Weapon("Marreta");
+
+            SwingUtilities.invokeLater(() -> {
+                new PlayerGUI(p1).setVisible(true); });
+
+            LightWeapon Marreta = new LightWeapon("Marreta");
             p1.Equipar_arma(Marreta);
             System.out.println("Stats: "+p1.gethp()+ " HP\n" + "arma atual: " + p1.getIDarma() + "\nSua arma causa: "+ p1.Get_Dano_Arma()+ " de Dano\nDurabilidade atual: "+ p1.Get_Durability());
         }
