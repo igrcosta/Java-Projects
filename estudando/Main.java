@@ -3,6 +3,7 @@ import java.util.Scanner; //importei a classe Scanner para dar "scanf" no teclad
 
 public class Main {
     public static void main(String[] args) throws Exception{
+
         System.out.println("\nBem vindo aos meus estudos para programar em java!\n");
         System.out.println("Aqui vou praticar herança, polimorfismo e por aí vai!\n");
 
@@ -13,12 +14,12 @@ public class Main {
         String mensagem = scanner.next();
         //escaneamos a string que vier (sem pular espaço) e guardamos na variável string nome
 
-        if(mensagem.equals(1)){
-            porsche po1 = new porsche(100, "Porsche_911", "Hybrid");
-            po1.ronco();
-        } else if (mensagem.equals(2)){
+        if(mensagem.equals("1")){
+            porsche po2 = new porsche(100, "Porsche_911", "Hybrid");
+            System.out.println(po2.ronco());
+        } else if (mensagem.equals("2")){
 
-        } else if (mensagem.equals(3)){
+        } else if (mensagem.equals("3")){
 
         }
 
