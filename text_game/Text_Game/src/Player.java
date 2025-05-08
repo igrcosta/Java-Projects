@@ -14,6 +14,10 @@ public class Player {
         this.arma = null;
     }
 
+    //construtor base para classe de player
+    public Player(int hp2) {
+    }
+
     //getters comuns
 
     public String getnome() {
