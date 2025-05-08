@@ -13,6 +13,7 @@ public carro(double speed, String name, String typeFuel){
     this.typeFuel = typeFuel;
 }
 
+
 //getters
 public double getSpeed(){
     return speed;
@@ -38,6 +39,12 @@ public void setName(String name){
 
 public void setTypeFuel(String typeFuel){
     this.typeFuel = typeFuel;
+}
+
+//método de teste
+
+public String ronco(){
+    return ("\nvruuum");
 }
 
 }
