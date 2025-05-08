@@ -1,10 +1,10 @@
-public class playerClass{
+public class playerRace{
     //lista de atributos
     protected int hp;
     protected String race;
 
     //construtor
-    public playerClass(int hp, String race){
+    public playerRace(int hp, String race){
         this.hp = hp;
         this.race = race.toUpperCase();
     }
@@ -28,4 +28,10 @@ public class playerClass{
     }
 
     //métodos
+
+    //método que vai dar cada skill baseado na raça que o player escolher
+    public void raceSkills(){
+        
+    }
+
 }
