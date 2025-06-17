@@ -75,7 +75,7 @@ public class main {
          //transformando a lista em stream para podermos trabalhar com ela
 
          .map(Pessoa::getNome)
-         //separamos cada nome de cada pessoa em forma de um mapeamento
+         // pegamos apenas o nome de cada pessoa usando map
 
          .sorted()
          //simplesmente organizamos a Stream 
